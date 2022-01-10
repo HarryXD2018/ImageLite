@@ -38,6 +38,8 @@
      <string>File</string>
     </property>
     <addaction name="actionLoad_image"/>
+    <addaction name="actionCamera_2"/>
+    <addaction name="separator"/>
     <addaction name="actionSave_image"/>
    </widget>
    <widget class="QMenu" name="menuPlugin">
@@ -105,6 +107,21 @@
   <action name="actionLine">
    <property name="text">
     <string>Line</string>
+   </property>
+  </action>
+  <action name="actionCamera">
+   <property name="text">
+    <string>Camera</string>
+   </property>
+  </action>
+  <action name="actionCamera_2">
+   <property name="text">
+    <string>Camera</string>
+   </property>
+  </action>
+  <action name="actionCamera_3">
+   <property name="text">
+    <string>Camera</string>
    </property>
   </action>
  </widget>
