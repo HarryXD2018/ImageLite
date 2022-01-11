@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
 from frame_design.camera_ui import Camera_Window
 from frame_design.main_ui import Ui_MainWindow
 from plugin.face_detection import face_detection
+from plugin.color_picker import ColorPicker
 
 
 class MainWin(QMainWindow, Ui_MainWindow):
@@ -20,10 +21,12 @@ class MainWin(QMainWindow, Ui_MainWindow):
         self.img_type = 'png'
         self.win_cam = None
         self.cap = None
+        self.picker = None
         self.actionLoad_image.triggered.connect(self.load_image)
         self.actionSave_image.triggered.connect(self.save_image)
         self.actionCamera_2.triggered.connect(self.camera)
         self.actionMTCNN_Face_Detection.triggered.connect(self.face_detection)
+        self.actionColor_picker.triggered.connect(self.color_picker)
 
     def load_image(self):
         filepath, tmp = QFileDialog.getOpenFileName(
@@ -69,6 +72,10 @@ class MainWin(QMainWindow, Ui_MainWindow):
         face_detection(self.img)
         self.img = cv2.cvtColor(self.img, cv2.COLOR_RGB2BGR)
         self.refresh()
+
+    def color_picker(self):
+        self.picker = ColorPicker()
+        self.picker.show()
 
 
 if __name__ == "__main__":

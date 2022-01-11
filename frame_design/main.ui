@@ -67,7 +67,7 @@
      <addaction name="actionLine"/>
     </widget>
     <addaction name="menuDraw"/>
-    <addaction name="actionCompare"/>
+    <addaction name="actionColor_picker"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuTool"/>
@@ -85,9 +85,9 @@
     <string>Save image</string>
    </property>
   </action>
-  <action name="actionCompare">
+  <action name="actionColor_picker">
    <property name="text">
-    <string>Compare</string>
+    <string>Color picker</string>
    </property>
   </action>
   <action name="actionPen">

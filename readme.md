@@ -10,6 +10,7 @@ Build-in functions include:
 
 - Image load and save
 - Camera input
+- Global Color (RGB) Picker
 
 Plug-in functions include:
 

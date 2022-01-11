@@ -11,5 +11,6 @@
 ## 插件
 
 - [x] **Face Detection**：在图片中定位人脸
+- [x] **Color Picker** 取色器
 - [ ] **Compare**：对比两张图片
 
