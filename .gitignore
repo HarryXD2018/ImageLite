@@ -1,3 +1,5 @@
 ./.idea/
 ./examples/
 ./tmp/
+/.idea/misc.xml
+/.idea/vcs.xml
