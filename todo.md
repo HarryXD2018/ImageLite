@@ -10,6 +10,6 @@
 
 ## 插件
 
-- [ ] **Face Detection**：在图片中定位人脸
+- [x] **Face Detection**：在图片中定位人脸
 - [ ] **Compare**：对比两张图片
 
