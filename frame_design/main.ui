@@ -46,6 +46,7 @@
     <property name="title">
      <string>Plugin</string>
     </property>
+    <addaction name="actionMTCNN_Face_Detection"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -122,6 +123,11 @@
   <action name="actionCamera_3">
    <property name="text">
     <string>Camera</string>
+   </property>
+  </action>
+  <action name="actionMTCNN_Face_Detection">
+   <property name="text">
+    <string>MTCNN Face Detection</string>
    </property>
   </action>
  </widget>

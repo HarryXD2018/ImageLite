@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
 
 from frame_design.camera_ui import Camera_Window
 from frame_design.main_ui import Ui_MainWindow
+from plugin.face_detection import face_detection
 
 
 class MainWin(QMainWindow, Ui_MainWindow):
@@ -22,6 +23,7 @@ class MainWin(QMainWindow, Ui_MainWindow):
         self.actionLoad_image.triggered.connect(self.load_image)
         self.actionSave_image.triggered.connect(self.save_image)
         self.actionCamera_2.triggered.connect(self.camera)
+        self.actionMTCNN_Face_Detection.triggered.connect(self.face_detection)
 
     def load_image(self):
         filepath, tmp = QFileDialog.getOpenFileName(
@@ -63,9 +65,10 @@ class MainWin(QMainWindow, Ui_MainWindow):
         self.img = self.win_cam.image
         self.refresh()
 
-
-
-
+    def face_detection(self):
+        face_detection(self.img)
+        self.img = cv2.cvtColor(self.img, cv2.COLOR_RGB2BGR)
+        self.refresh()
 
 
 if __name__ == "__main__":
